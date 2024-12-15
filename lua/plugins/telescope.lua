@@ -38,9 +38,17 @@ return {
     end
 
     local search_dirs = {
-      "~/.config/zsh/",
       "~/.config/nvim/",
+      "~/Documents/在愿望的最后一个季节/",
       "~/PycharmProjects/pythonProject/",
+    }
+
+    local nvim_dirs = {
+      "~/.config/nvim/",
+    }
+
+    local markdown_dirs = {
+      "~/Documents/在愿望的最后一个季节/",
     }
 
     vim.keymap.set("n", "<space>ff", function()
@@ -54,7 +62,7 @@ return {
         attach_mappings = attach_mappings
       })
     end, {noremap = true, silent = true, desc = "Find files by Words"})
-    
+
     vim.keymap.set("n", "<space>fdf", function()
       builtin.find_files({
         attach_mappings = attach_mappings,
@@ -62,13 +70,40 @@ return {
       })
     end, {noremap = true, silent = true, desc = "Find files in selected dirs"})
 
-    vim.keymap.set("n", "<space>fdw", function() 
+    vim.keymap.set("n", "<space>fdw", function()
       builtin.live_grep({
         attach_mappings = attach_mappings,
         search_dirs = search_dirs
       })
     end, {noremap = true, silent = true, desc = "Find files in selected dirs by Words"})
 
+    vim.keymap.set("n", "<space>fdnf", function()
+      builtin.find_files({
+        attach_mappings = attach_mappings,
+        search_dirs = nvim_dirs
+      })
+    end, {noremap = true, silent = true, desc = "Find files in nvim dirs"})
+
+    vim.keymap.set("n", "<space>fdnw", function()
+      builtin.live_grep({
+        attach_mappings = attach_mappings,
+        search_dirs = nvim_dirs
+      })
+    end, {noremap = true, silent = true, desc = "Find files in nvim dirs by Words"})
+
+    vim.keymap.set("n", "<space>fdmf", function()
+      builtin.find_files({
+        attach_mappings = attach_mappings,
+        search_dirs = markdown_dirs 
+      })
+    end, {noremap = true, silent = true, desc = "Find files in markdown dirs"})
+
+    vim.keymap.set("n", "<space>fdmw", function()
+      builtin.live_grep({
+        attach_mappings = attach_mappings,
+        search_dirs = markdown_dirs
+      })
+    end, {noremap = true, silent = true, desc = "Find files in markdown dirs by Words"})
   end,
 }
 

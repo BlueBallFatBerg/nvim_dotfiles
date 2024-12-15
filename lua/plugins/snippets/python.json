@@ -1,0 +1,10 @@
+{
+  "py": {
+    "prefix": "py",
+    "body": [
+      "pypypy"
+    ],
+    "description": "python test"
+  }
+}
+
