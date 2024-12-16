@@ -43,20 +43,30 @@ return {
       "~/BIGAI/tongpy/",
       "~/pythonProject/",
       "~/markdown/",
-      "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/gor/",
-      "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/nlp_lfp/",
-      "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/pg_retriever/",
+      "~/OmniBBFB/",
+      -- "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/gor/",
+      -- "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/nlp_lfp/",
+      -- "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/pg_retriever/",
+      -- "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/rdflib/",
+      -- "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/rdflib_leveldb/",
+      -- "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/rdflib_sqlalchemy/",
+      -- "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/sqlalchemy/",
     }
     local nvim_dirs = {
       "~/.config/nvim/",
     }
     local markdown_dirs = {
       "~/markdown/",
+      "~/OmniBBFB/",
     }
     local python_lib_dirs = {
       "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/gor/",
       "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/nlp_lfp/",
       "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/pg_retriever/",
+      "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/rdflib/",
+      "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/rdflib_leveldb/",
+      "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/rdflib_sqlalchemy/",
+      "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/sqlalchemy/",
     }
     local bigai_dirs = {
       "~/BIGAI/pibaby/",
