@@ -3,12 +3,12 @@ return {
   lazy = false,
 
   requires = { {"nvim-lua/plenary.nvim"}, lazy = false },
-  
+
   config = function()
     require("telescope").setup{}
 
-    local builtin = require("telescope.builtin")    
-    local actions = require("telescope.actions")  
+    local builtin = require("telescope.builtin")
+    local actions = require("telescope.actions")
     local actions_state = require("telescope.actions.state")
 
     local attach_mappings = function(prompt_bufnr, map)
@@ -39,16 +39,28 @@ return {
 
     local search_dirs = {
       "~/.config/nvim/",
-      "~/Documents/在愿望的最后一个季节/",
-      "~/PycharmProjects/pythonProject/",
+      "~/BIGAI/pibaby/",
+      "~/BIGAI/tongpy/",
+      "~/pythonProject/",
+      "~/markdown/",
+      "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/gor/",
+      "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/nlp_lfp/",
+      "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/pg_retriever/",
     }
-
     local nvim_dirs = {
       "~/.config/nvim/",
     }
-
     local markdown_dirs = {
-      "~/Documents/在愿望的最后一个季节/",
+      "~/markdown/",
+    }
+    local python_lib_dirs = {
+      "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/gor/",
+      "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/nlp_lfp/",
+      "~/.pyenv/versions/3.10.14/envs/tongpy/lib/python3.10/site-packages/pg_retriever/",
+    }
+    local bigai_dirs = {
+      "~/BIGAI/pibaby/",
+      "~/BIGAI/tongpy/",
     }
 
     vim.keymap.set("n", "<space>ff", function()
@@ -94,7 +106,7 @@ return {
     vim.keymap.set("n", "<space>fdmf", function()
       builtin.find_files({
         attach_mappings = attach_mappings,
-        search_dirs = markdown_dirs 
+        search_dirs = markdown_dirs
       })
     end, {noremap = true, silent = true, desc = "Find files in markdown dirs"})
 
@@ -104,6 +116,34 @@ return {
         search_dirs = markdown_dirs
       })
     end, {noremap = true, silent = true, desc = "Find files in markdown dirs by Words"})
+
+    vim.keymap.set("n", "<space>fdlf", function()
+      builtin.find_files({
+        attach_mappings = attach_mappings,
+        search_dirs = python_lib_dirs
+      })
+    end, {noremap = true, silent = true, desc = "Find files in python lib dirs"})
+
+    vim.keymap.set("n", "<space>fdlw", function()
+      builtin.live_grep({
+        attach_mappings = attach_mappings,
+        search_dirs = python_lib_dirs
+      })
+    end, {noremap = true, silent = true, desc = "Find files in python lib dirs by Words"})
+
+    vim.keymap.set("n", "<space>fdbf", function()
+      builtin.find_files({
+        attach_mappings = attach_mappings,
+        search_dirs = bigai_dirs
+      })
+    end, {noremap = true, silent = true, desc = "Find files in bigai dirs"})
+
+    vim.keymap.set("n", "<space>fdbw", function()
+      builtin.live_grep({
+        attach_mappings = attach_mappings,
+        search_dirs = bigai_dirs
+      })
+    end, {noremap = true, silent = true, desc = "Find files in bigai dirs by Words"})
   end,
 }
 
