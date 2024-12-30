@@ -56,13 +56,16 @@ return {
 
       pylsp = {
         settings = {
-          plugins = {
-            pycodestyle = { maxLineLength = 120 },
-          },
-        },
-      },
-
-      pylint = { disabled = true }
+          pylsp = {
+            configurationSources = { "pycodestyle" },
+            plugins = {
+              pycodestyle = {
+                maxLineLength = 120,
+              }
+            }
+          }
+        }
+      }
     },
     -- Configure buffer local auto commands to add when attaching a language server
     autocmds = {
