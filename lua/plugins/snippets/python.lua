@@ -16,4 +16,44 @@ return {
       { delimiters = "<>" }
     )
   ),
+
+  s(
+    {
+      trig = "lgi",
+      name = "xxx",
+      dscr = [[ logger.info("xxx") ]]
+    },
+    fmt(
+      [[
+      logger.info("<> <>: <> %s", <>)
+      ]],
+      {
+        i(1, "module"),
+        i(2, "function"),
+        i(3, "xxx"),
+        i(4, "variable"),
+      },
+      { delimiters = "<>" }
+    )
+  ),
+
+  s(
+    {
+      trig = "ptf",
+      name = "xxx",
+      dscr = [[ print(f"xxx") ]]
+    },
+    fmt(
+      [[
+      print(f"<> <>: <> {<>}")
+      ]],
+      {
+        i(1, "module"),
+        i(2, "function"),
+        i(3, "xxx"),
+        i(4, "variable"),
+      },
+      { delimiters = "<>" }
+    )
+  ),
 }

@@ -45,11 +45,6 @@ return {
     -- local home = os.getenv("HOME")
 
     local search_dirs = {
-      "~/.config/nvim/",
-      "~/BIGAI/pibaby/",
-      "~/BIGAI/tongpy/",
-      "~/markdown/",
-      "~/OmniBBFB/",
       "~/test/",
     }
     local nvim_dirs = {
@@ -74,6 +69,7 @@ return {
     local bigai_dirs = {
       "~/BIGAI/pibaby/",
       "~/BIGAI/tongpy/",
+      "~/BIGAI/gor/",
     }
 
     vim.keymap.set("n", "<space>ff", function()
