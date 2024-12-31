@@ -30,7 +30,6 @@
   "lualine.nvim": { "branch": "master", "commit": "2a5bae925481f999263d6f5ed8361baef8df4f83" },
   "luvit-meta": { "branch": "main", "commit": "57d464c4acb5c2e66bd4145060f5dc9e96a7bbb7" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "43894adcf10bb1190c2184bd7c1750e8ea2b3dce" },
-  "mason-null-ls.nvim": { "branch": "main", "commit": "2b8433f76598397fcc97318d410e0c4f7a4bea6a" },
   "mason-nvim-dap.nvim": { "branch": "main", "commit": "8b9363d83b5d779813cdd2819b8308651cec2a09" },
   "mason.nvim": { "branch": "main", "commit": "c43eeb5614a09dc17c03a7fb49de2e05de203924" },
   "mini.bufremove": { "branch": "main", "commit": "1ee294a97e091d3cf967974df622c0d887890dc2" },
@@ -62,7 +61,9 @@
   "telescope.nvim": { "branch": "master", "commit": "85922dde3767e01d42a08e750a773effbffaea3e" },
   "todo-comments.nvim": { "branch": "main", "commit": "ae0a2afb47cf7395dc400e5dc4e05274bf4fb9e0" },
   "toggleterm.nvim": { "branch": "main", "commit": "022ff5594acccc8d90d2e46dc43994f7722ebdf7" },
+  "vim-barbaric": { "branch": "master", "commit": "bb4bef87417fc3ad92319f556f02d6658b401288" },
   "vim-cursorword": { "branch": "master", "commit": "371fdd7fa8817c28aa09d181cfcfa3c7ca29bf56" },
   "vim-illuminate": { "branch": "master", "commit": "5eeb7951fc630682c322e88a9bbdae5c224ff0aa" },
+  "vim-xkbswitch": { "branch": "master", "commit": "39914ff3aa3a5678285ba4b740524351d9f5ae18" },
   "which-key.nvim": { "branch": "main", "commit": "8ab96b38a2530eacba5be717f52e04601eb59326" }
 }
