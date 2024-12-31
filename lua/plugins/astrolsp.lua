@@ -46,9 +46,9 @@ return {
               diagnosticMode = "openFilesOnly",
               typeCheckingMode = "off",
               useLibraryCodeForTypes = false,
-            },
-          },
-        },
+            }
+          }
+        }
       },
 
       pylsp = {
@@ -61,8 +61,8 @@ return {
               }
             }
           }
-        },
-      },
+        }
+      }
     },
     -- Configure buffer local auto commands to add when attaching a language server
     autocmds = {
