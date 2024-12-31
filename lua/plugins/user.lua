@@ -1,4 +1,6 @@
 return {
+  "lyokha/vim-xkbswitch",
+  "rlue/vim-barbaric",
   "andweeb/presence.nvim",
   {
     "ray-x/lsp_signature.nvim",
