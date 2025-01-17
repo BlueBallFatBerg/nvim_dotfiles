@@ -15,7 +15,5 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
-vim.g.XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
-
 require "lazy_setup"
 require "polish"

@@ -1,6 +1,13 @@
 return {
-  "lyokha/vim-xkbswitch",
-  "rlue/vim-barbaric",
+  {
+    "lilydjwg/fcitx.vim",
+    lazy = true,
+  },
+  {
+    "rlue/vim-barbaric",
+    lazy = true,
+    dependencies = { "lilydjwg/fcitx.vim" },
+  },
   "andweeb/presence.nvim",
   {
     "ray-x/lsp_signature.nvim",
