@@ -16,6 +16,8 @@ if not pcall(require, "lazy") then
 end
 
 vim.g.XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
+vim.opt.guifont = "Iosevka Nerd Font"  -- display Nerd Font Icon correctly
 
 require "lazy_setup"
 require "polish"
+require "keymap"

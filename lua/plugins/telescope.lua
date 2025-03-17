@@ -7,8 +7,8 @@ return {
   config = function()
     require("telescope").setup{}
 
-    local builtin = require("telescope.builtin")    
-    local actions = require("telescope.actions")  
+    local builtin = require("telescope.builtin")
+    local actions = require("telescope.actions")
     local actions_state = require("telescope.actions.state")
 
     local attach_mappings = function(prompt_bufnr, map)
@@ -30,8 +30,8 @@ return {
         vim.cmd("tabnew " .. selection.path)
       end
 
-      map("n", "<C-x>", open_split)
-      map("n", "<C-v>", open_vsplit)
+      map("n", "<C-d>", open_split)
+      map("n", "<C-r>", open_vsplit)
       map("n", "<C-t>", open_tab)
 
       return true
@@ -48,7 +48,8 @@ return {
     }
 
     local markdown_dirs = {
-      "~/Documents/在愿望的最后一个季节/",
+      -- "~/Documents/在愿望的最后一个季节/",
+      "~/vaults/personal/",
     }
 
     vim.keymap.set("n", "<space>ff", function()

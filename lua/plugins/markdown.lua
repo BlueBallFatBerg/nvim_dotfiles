@@ -1,3 +1,5 @@
+vim.opt_local.conceallevel = 2
+
 return {
 	"iamcco/markdown-preview.nvim",
 	enabled = false,
