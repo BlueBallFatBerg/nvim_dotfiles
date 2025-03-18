@@ -1,10 +1,12 @@
--- return {
---   s("TODO", fmt([==[
---     > [!TODO]
---     > 
---   ]==], {
---     t("Hello, LuaSnip!")
---   }, {
---     delimiters = "<>"
---   })),
--- }
+return {
+  s("tdq", {
+    t({"> [!TODO]", "> "}),  -- 多行字符串
+    i(0),
+  }),
+
+  postfix(".br", {
+    f(function(_, parent)
+      return "[" .. parent.snippet.env.POSTFIX_MATCH .. "]"
+    end, {}),
+  }),
+}

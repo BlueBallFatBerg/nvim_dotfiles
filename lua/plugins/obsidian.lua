@@ -23,6 +23,59 @@ return {
       },
     },
 
+    -- Optional, configure key mappings. These are the defaults. If you don't want to set any keymappings this
+    -- way then set 'mappings = {}'.
+    mappings = {
+      ["<space>ml"] = {
+        action = function()
+          vim.cmd("ObsidianFollowLink")
+        end,
+        mode = "v",
+        opts = { noremap = false, expr = true, buffer = true },
+      },
+      -- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
+      -- ["gf"] = {
+      --   action = function()
+      --     return require("obsidian").util.gf_passthrough()
+      --   end,
+      --   opts = { noremap = false, expr = true, buffer = true },
+      -- },
+      -- Toggle check-boxes.
+      -- ["<leader>ch"] = {
+      --   action = function()
+      --     return require("obsidian").util.toggle_checkbox()
+      --   end,
+      --   opts = { buffer = true },
+      -- },
+      -- Smart action depending on context, either follow link or toggle checkbox.
+      -- ["<cr>"] = {
+      --   action = function()
+      --     return require("obsidian").util.smart_action()
+      --   end,
+      --   opts = { buffer = true, expr = true },
+      -- }
+    },
+
+    -- Optional, by default when you use `:ObsidianFollowLink` on a link to an external
+    -- URL it will be ignored but you can customize this behavior here.
+    ---@param url string
+    follow_url_func = function(url)
+      -- Open the URL in the default web browser.
+      vim.fn.jobstart({"open", url})  -- Mac OS
+      -- vim.fn.jobstart({"xdg-open", url})  -- linux
+      -- vim.cmd(':silent exec "!start ' .. url .. '"') -- Windows
+      -- vim.ui.open(url) -- need Neovim 0.10.0+
+    end,
+
+    -- Optional, by default when you use `:ObsidianFollowLink` on a link to an image
+    -- file it will be ignored but you can customize this behavior here.
+    ---@param img string
+    follow_img_func = function(img)
+      vim.fn.jobstart { "qlmanage", "-p", img }  -- Mac OS quick look preview
+      -- vim.fn.jobstart({"xdg-open", url})  -- linux
+      -- vim.cmd(':silent exec "!start ' .. url .. '"') -- Windows
+    end,
+
     -- Optional, configure additional syntax highlighting / extmarks.
     -- This requires you have `conceallevel` set to 1 or 2. See `:help conceallevel` for more details.
     ui = {

@@ -30,8 +30,8 @@ return {
         vim.cmd("tabnew " .. selection.path)
       end
 
-      map("n", "<C-d>", open_split)
-      map("n", "<C-r>", open_vsplit)
+      map("n", "<C-x>", open_split)
+      map("n", "<C-v>", open_vsplit)
       map("n", "<C-t>", open_tab)
 
       return true
