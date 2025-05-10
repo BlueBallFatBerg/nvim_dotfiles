@@ -13,6 +13,7 @@ return {
         "lua_ls",
         "pyright",
         "pylsp",
+        "tinymist",
         -- add more arguments for adding more language servers
       },
     },

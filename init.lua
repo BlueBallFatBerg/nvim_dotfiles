@@ -21,3 +21,4 @@ vim.opt.guifont = "Iosevka Nerd Font"  -- display Nerd Font Icon correctly
 require "lazy_setup"
 require "polish"
 require "keymap"
+require "autocmd"

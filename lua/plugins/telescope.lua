@@ -39,8 +39,8 @@ return {
 
     local search_dirs = {
       "~/.config/nvim/",
-      "~/Documents/在愿望的最后一个季节/",
-      "~/PycharmProjects/pythonProject/",
+      "~/vaults/",
+      "~/Downloads/",
     }
 
     local nvim_dirs = {
@@ -48,8 +48,10 @@ return {
     }
 
     local markdown_dirs = {
-      -- "~/Documents/在愿望的最后一个季节/",
-      "~/vaults/personal/",
+      "~/vaults/",
+    }
+    local blog_dirs = {
+      "~/myblog/"
     }
 
     vim.keymap.set("n", "<space>ff", function()
@@ -95,7 +97,7 @@ return {
     vim.keymap.set("n", "<space>fdmf", function()
       builtin.find_files({
         attach_mappings = attach_mappings,
-        search_dirs = markdown_dirs 
+        search_dirs = markdown_dirs
       })
     end, {noremap = true, silent = true, desc = "Find files in markdown dirs"})
 
@@ -105,6 +107,20 @@ return {
         search_dirs = markdown_dirs
       })
     end, {noremap = true, silent = true, desc = "Find files in markdown dirs by Words"})
-  end,
+
+    vim.keymap.set("n", "<space>fdbf", function()
+      builtin.find_files({
+        attach_mappings = attach_mappings,
+        search_dirs = markdown_dirs
+      })
+    end, {noremap = true, silent = true, desc = "Find files in blog dirs"})
+
+    vim.keymap.set("n", "<space>fdbw", function()
+      builtin.live_grep({
+        attach_mappings = attach_mappings,
+        search_dirs = markdown_dirs
+      })
+    end, {noremap = true, silent = true, desc = "Find files in blog dirs by Words"})
+  end
 }
 
