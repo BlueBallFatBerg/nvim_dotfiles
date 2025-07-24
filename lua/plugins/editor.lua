@@ -10,8 +10,8 @@ return {
       return {
         keymap = {
           fzf = {
-            ["Tab"] = "Down",
-            ["Shift-Tab"] = "Up",
+            ["tab"] = "down",
+            ["shift-tab"] = "up",
             ["ctrl-x"] = function(selected)
               local file = selected[1]
               vim.cmd('split ' .. file)

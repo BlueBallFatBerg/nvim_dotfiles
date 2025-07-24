@@ -1,7 +1,6 @@
 local is_mac = vim.fn.has("mac") == 1
 local nvim_dir = "~/.config/nvim"
 local markdown_dir = "~/vaults"
-local blog_dir = "~/myblog"
 
 if is_mac == 1 then
   vim.keymap.set({ "n", "i" }, "<D-s>", function()

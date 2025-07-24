@@ -23,6 +23,31 @@ return {
       {
         "jay-babu/mason-null-ls.nvim"
       },
-    }
+    },
+    config = function()
+      require("lspconfig").lua_ls.setup({})
+      require("lspconfig").pylsp.setup({
+        settings = {
+          pylsp = {
+            configuationSources = { "pycodestyle" },
+            pycodestyle = {
+              maxlinelength = 120,
+            }
+          }
+        }
+      })
+      require("lspconfig").pyright.setup({
+        settings = {
+          python = {
+            analysis = {
+              autoSearchPaths = true,
+              diagnosticMode = "workspace",
+              typeCheckingMode = "off",
+              useLibraryCodeForTypes = false,
+            }
+          }
+        }
+      })
+    end,
   }
 }
