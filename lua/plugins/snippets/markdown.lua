@@ -1,29 +1,24 @@
 return {
   s("todoq", {
-    t({"> [!Todo]", "> "}),  -- 多行字符串
+    t({"> [!Todo]", "> "}),
     i(0),
   }),
 
   s("noteq", {
-    t({"> [!Note]", "> "}),  -- 多行字符串
+    t({"> [!Note]", "> "}),
     i(0),
   }),
 
   s("warnq", {
-    t({"> [!Warning]", "> "}),  -- 多行字符串
+    t({"> [!Warning]", "> "}),
     i(0),
   }),
 
   s("whatq", {
-    t({"> [What?]", "> "}),  -- 多行字符串
+    t({"> [What?]", "> "}),
     i(0),
   }),
 
-  s("eg", {
-    t({"e.g."}),
-    i(0),
-  }),
-  
   postfix(".sbb", {  -- bracket
     f(function(_, parent)
       return "[" .. parent.snippet.env.POSTFIX_MATCH .. "]"

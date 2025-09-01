@@ -1,4 +1,7 @@
--- if true then return {} end
+-- "neovim/nvim-lspconfig",
+-- "williamboman/mason.nvim",
+-- "williamboman/mason-lspconfig.nvim",
+-- "jay-babu/mason-null-ls.nvim"
 return {
   {
     "neovim/nvim-lspconfig",
@@ -12,13 +15,6 @@ return {
       },
       {
         "williamboman/mason-lspconfig.nvim",
-        -- opts = {
-        --   ensure_installed = {
-        --     "lua_ls",
-        --     "pyright",
-        --     "pylsp",
-        --   }
-        -- },
       },
       {
         "jay-babu/mason-null-ls.nvim"
@@ -31,11 +27,12 @@ return {
           pylsp = {
             configuationSources = { "pycodestyle" },
             pycodestyle = {
-              maxlinelength = 120,
+              maxLineLength = 120,
             }
           }
         }
       })
+      -- require("lspconfig").pyright.setup({})
       require("lspconfig").pyright.setup({
         settings = {
           python = {
